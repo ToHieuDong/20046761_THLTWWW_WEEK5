@@ -29,7 +29,7 @@ public class Candidate {
     @Column(name = "phone", length = 50)
     private String phone;
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.REMOVE, fetch = FetchType.EAGER)
     @JoinColumn(name = "add_id")
     private Address address;
 }

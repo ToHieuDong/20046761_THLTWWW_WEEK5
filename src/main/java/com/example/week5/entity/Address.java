@@ -26,7 +26,7 @@ public class Address {
     @Column(name = "city", length = 50)
     private String city;
     @Column(name = "county", length = 50)
-    private short county;
+    private String county;
     @Column(name = "number", length = 50)
     private String number;
     @Column(name = "zipcode", length = 50)
