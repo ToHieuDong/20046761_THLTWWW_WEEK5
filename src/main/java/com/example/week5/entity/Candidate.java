@@ -30,6 +30,6 @@ public class Candidate {
     private String phone;
 
     @OneToOne(cascade = CascadeType.REMOVE, fetch = FetchType.EAGER)
-    @JoinColumn(name = "add_id")
+    @JoinColumn(name = "address")
     private Address address;
 }
