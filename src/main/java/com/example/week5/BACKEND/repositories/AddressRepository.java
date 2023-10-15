@@ -1,6 +1,6 @@
-package com.example.week5.repositories;
+package com.example.week5.BACKEND.repositories;
 
-import com.example.week5.entity.Address;
+import com.example.week5.BACKEND.entity.Address;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.UUID;

@@ -1,4 +1,4 @@
-package com.example.week5.entity;
+package com.example.week5.BACKEND.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -10,13 +10,13 @@ import java.util.UUID;
 
 @Component
 @Entity
-@Table(name = "candidate")
+@Table(name = "company")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class Company {
     @Id
-    @Column(name = "comp_id", columnDefinition = "bigint(20)")
+    @Column(name = "comp_id")
     private UUID compId;
     @Column(name = "about", length = 50)
     private String about;

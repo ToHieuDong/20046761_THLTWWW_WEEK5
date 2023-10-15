@@ -1,4 +1,4 @@
-package com.example.week5.entity;
+package com.example.week5.BACKEND.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -19,7 +19,7 @@ import java.util.UUID;
 @NoArgsConstructor@AllArgsConstructor
 public class Address {
     @Id
-    @Column(name = "add_id", columnDefinition = "bigint(20)")
+    @Column(name = "add_id")
     private UUID id;
     @Column(name = "street", length = 50)
     private String street;

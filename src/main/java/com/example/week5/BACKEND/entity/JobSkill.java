@@ -1,5 +1,6 @@
-package com.example.week5.entity;
+package com.example.week5.BACKEND.entity;
 
+import com.example.week5.BACKEND.IDs.JobSkillID;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -12,6 +13,7 @@ import java.util.Objects;
 @Component
 @Entity
 @Table(name = "job_skill")
+@IdClass(JobSkillID.class)
 @Data
 @NoArgsConstructor
 @AllArgsConstructor

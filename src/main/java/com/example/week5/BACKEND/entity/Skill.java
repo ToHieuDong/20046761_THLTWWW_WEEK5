@@ -1,4 +1,4 @@
-package com.example.week5.entity;
+package com.example.week5.BACKEND.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -6,6 +6,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import org.springframework.stereotype.Component;
 
@@ -19,7 +20,7 @@ import java.util.UUID;
 @AllArgsConstructor
 public class Skill {
     @Id
-    @Column(name = "skill_id", columnDefinition = "bigint(20)")
+    @Column(name = "skill_id")
     private UUID skillId;
     @Column(name = "description", length = 50)
     private String description;

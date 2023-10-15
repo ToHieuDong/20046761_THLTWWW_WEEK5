@@ -1,7 +1,7 @@
-package com.example.week5.services;
+package com.example.week5.BACKEND.services;
 
-import com.example.week5.entity.Candidate;
-import com.example.week5.repositories.CandidateRepository;
+import com.example.week5.BACKEND.entity.Candidate;
+import com.example.week5.BACKEND.repositories.CandidateRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

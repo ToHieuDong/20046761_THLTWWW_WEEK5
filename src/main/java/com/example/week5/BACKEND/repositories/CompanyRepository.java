@@ -1,6 +1,6 @@
-package com.example.week5.repositories;
+package com.example.week5.BACKEND.repositories;
 
-import com.example.week5.entity.Company;
+import com.example.week5.BACKEND.entity.Company;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.UUID;

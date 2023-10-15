@@ -1,4 +1,4 @@
-package com.example.week5.entity;
+package com.example.week5.BACKEND.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -17,7 +17,7 @@ import java.util.UUID;
 @AllArgsConstructor
 public class Experience {
     @Id
-    @Column(name = "exp_id", columnDefinition = "bigint(20)")
+    @Column(name = "exp_id")
     private UUID expId;
     @Column(name = "from_day", columnDefinition = "datetime")
     private LocalDate fromDay;

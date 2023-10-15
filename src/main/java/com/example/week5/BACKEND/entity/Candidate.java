@@ -1,4 +1,4 @@
-package com.example.week5.entity;
+package com.example.week5.BACKEND.entity;
 
 
 import jakarta.persistence.*;
@@ -18,7 +18,7 @@ import java.util.UUID;
 @AllArgsConstructor
 public class Candidate {
     @Id
-    @Column(name = "can_id", columnDefinition = "bigint(20)")
+    @Column(name = "can_id")
     private UUID can_id;
     @Column(name = "dob", columnDefinition = "datetime")
     private LocalDate dob;
