@@ -10,29 +10,32 @@
 <!--    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>-->
 </head>
 <body>
-    <div>
-        <table class="table table-hover table-striped">
-            <tr>
-                <th>ID</th>
-                <th>Name</th>
-                <th>DOB</th>
-                <th>Address</th>
-                <th>Phone</th>
-                <th>Email</th>
-                <th>Edit</th>
-                <th>Delete</th>
-            </tr>
+    <div th:switch="${listCan}" >
+        <h2 th:case="null">No candidates yet!</h2>
+        <div th:case="*">
+            <h2>Candidates</h2>
+            <table class="table table-hover table-striped">
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>DOB</th>
+                    <th>Address</th>
+                    <th>Phone</th>
+                    <th>Email</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
 
-            <tr th:each = "can: ${listCan}">
-                <td th:text = "${can.getCan_id()}"></td>
-                <td th:text = "${can.getDob()}"></td>
-                <td th:text = "${can.getFullName()}"></td>
-                <td th:text = "${can.getAddress()}"></td>
-                <td th:text = "${can.getPhone()}"></td>
-                <td th:text = "${can.getEmail()}"></td>
-            </tr>
-
-        </table>
+                <tr th:each = "can: ${listCan}">
+                    <td th:text = "${can.can_id}"></td>
+                    <td th:text = "${can.dob}"></td>
+                    <td th:text = "${can.fullName}"></td>
+                    <td th:text = "${can.address}"></td>
+                    <td th:text = "${can.phone}"></td>
+                    <td th:text = "${can.email}"></td>
+                </tr>
+            </table>
+        </div>
     </div>
 </body>
 </html>

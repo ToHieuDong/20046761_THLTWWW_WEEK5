@@ -26,14 +26,21 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springframework.boot:spring-boot-starter-web-services'
+//	implementation 'org.springframework.boot:spring-boot-starter-security'
+//	implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity6'
     implementation 'org.mariadb.jdbc:mariadb-java-client:3.2.0'
+
+
     compileOnly 'org.projectlombok:lombok'
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
     annotationProcessor 'org.projectlombok:lombok'
+
     //for country code
     implementation 'com.neovisionaries:nv-i18n:1.29'
+
     //For database REST
     implementation 'org.springframework.data:spring-data-rest-core:4.1.4'
+
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'org.springframework.security:spring-security-test'
 }

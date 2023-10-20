@@ -20,6 +20,8 @@ public class CandidateController {
 //    @Autowired
 //    private AddressRepository addressRepository;
 
+
+
     @GetMapping("/list")
     public String showListCandidate(Model model) {
         List<Candidate> lisCan = candidateRepository.findAll();

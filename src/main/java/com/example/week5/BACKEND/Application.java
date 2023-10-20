@@ -1,10 +1,19 @@
 package com.example.week5.BACKEND;
 
+import com.example.week5.BACKEND.entity.Address;
+import com.example.week5.BACKEND.entity.Candidate;
 import com.example.week5.BACKEND.repositories.AddressRepository;
 import com.example.week5.BACKEND.repositories.CandidateRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
+
+import java.time.LocalDate;
+import java.util.List;
+import java.util.Random;
+import java.util.UUID;
 
 @SpringBootApplication
 public class Application {
@@ -13,13 +22,16 @@ public class Application {
         SpringApplication.run(Application.class, args);
     }
 
-//    @Autowired
-//    private CandidateRepository candidateRepository;
-//    @Autowired
-//    private AddressRepository addressRepository;
-//    @Bean
-//    CommandLineRunner initData(){
-//        return args -> {
+    @Autowired
+    private CandidateRepository candidateRepository;
+    @Autowired
+    private AddressRepository addressRepository;
+    @Bean
+    CommandLineRunner initData(){
+        return args -> {
+//            List<Candidate> lisCan = candidateRepository.findAll();
+//            lisCan.forEach(System.out::println);
+
 //            Random rnd =new Random();
 //            for (int i = 1; i < 1000; i++) {
 //                Address add = new Address(UUID.randomUUID(),"Quang Trung","HCM",
@@ -28,11 +40,11 @@ public class Application {
 //
 //                Candidate can=new Candidate(UUID.randomUUID(),
 //                        LocalDate.of(1998,11,10),
-//                        "email_"+i+"@gmail.com", "name#"+rnd, "12345",  add);
+//                        "email_"+i+"@gmail.com", "name#"+i, "12345",  add);
 //                candidateRepository.save(can);
 //                System.out.println("Added: " +can);
 //            }
-//        };
-//    }
+        };
+    }
 
 }
