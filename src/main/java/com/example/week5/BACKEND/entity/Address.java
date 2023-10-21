@@ -7,6 +7,7 @@ import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 import org.springframework.stereotype.Component;
 
 import java.util.UUID;
@@ -31,4 +32,9 @@ public class Address {
     private String number;
     @Column(name = "zipcode", length = 50)
     private String zipcode;
+
+    @Override
+    public String toString() {
+        return street + ", " + city + ", " + county + ", " + number + ", " + zipcode ;
+    }
 }

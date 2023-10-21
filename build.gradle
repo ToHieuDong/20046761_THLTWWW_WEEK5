@@ -41,6 +41,7 @@ dependencies {
     //For database REST
     implementation 'org.springframework.data:spring-data-rest-core:4.1.4'
 
+
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'org.springframework.security:spring-security-test'
 }

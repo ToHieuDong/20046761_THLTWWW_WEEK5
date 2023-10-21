@@ -10,7 +10,6 @@ import org.springframework.stereotype.Component;
 import java.time.LocalDate;
 import java.util.UUID;
 
-@Component
 @Entity
 @Table(name = "candidate")
 @Data

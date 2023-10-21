@@ -1,21 +1,14 @@
-package com.example.week5.BACKEND;
+package com.example.week5;
 
-import com.example.week5.BACKEND.entity.Address;
-import com.example.week5.BACKEND.entity.Candidate;
 import com.example.week5.BACKEND.repositories.AddressRepository;
 import com.example.week5.BACKEND.repositories.CandidateRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Bean;
-
-import java.time.LocalDate;
-import java.util.List;
-import java.util.Random;
-import java.util.UUID;
 
 @SpringBootApplication
+//@ComponentScan(basePackages = "com.example.week5.BACKEND.repositories")
 public class Application {
 
     public static void main(String[] args) {
@@ -26,7 +19,7 @@ public class Application {
     private CandidateRepository candidateRepository;
     @Autowired
     private AddressRepository addressRepository;
-    @Bean
+//    @Bean
     CommandLineRunner initData(){
         return args -> {
 //            List<Candidate> lisCan = candidateRepository.findAll();
