@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <h1 class="text-center">LIST CANDIDATES</h1>
+    <table class="table table-hover">
+        <thead>
+        </thead>
+        <tbody>
+        <tr th:each="candidate : ${candidatePage.content}"
+            th:style="${iStat.odd}? 'font-weight: bold;'"
+            th:alt-title="${iStat.even}? 'even' : 'odd'">
+            <td th:text="${candidate.id}"></td>
+            <td th:text="${candidate.fullName}"></td>
+            <td th:text="${candidate.dob}"></td>
+            <td th:text="${candidate.address}"></td>
+            <td th:text="${candidate.phone}"></td>
+            <td th:text="${candidate.email}"></td>
+            <td><a th:href="@{/edit/{id}(id=${candidate.id})}">Edit</a></td>
+            <td><a th:href="@{/delete/{id}(id=${candidate.id})}">Delete</a></td>
+        </tr>
+        </tbody>
+    </table>
+    <div class="inline" th:if="${candidatePage.totalPages > 0}" th:each="pageNumber : ${pageNumbers}">
+        <a th:href="@{/candidates(size=${candidatePage.size}, page=${pageNumber})}"
+           th:text="${pageNumber}"
+           th:class="${pageNumber==candidatePage.number + 1} ? active"></a>
+    </div>
+    <br/>
+
+
+</body>
+</html>
