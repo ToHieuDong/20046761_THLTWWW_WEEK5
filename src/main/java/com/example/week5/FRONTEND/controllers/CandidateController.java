@@ -35,10 +35,11 @@ public class CandidateController {
                                           @RequestParam("size") Optional<Integer> size) {
         int currentPage = page.orElse(1);
         int pageSize = size.orElse(10);
-        Page<Candidate> candidatePage= candidateServices.findAll(currentPage - 1,pageSize,"canId","asc");
+        Page<Candidate> candidatePage= candidateServices.findAll(currentPage - 1,pageSize,"phone","asc");
 
 
         model.addAttribute("candidatePage", candidatePage);
+        System.out.println(candidatePage.stream().toList());
 
         int totalPages = candidatePage.getTotalPages();
         if (totalPages > 0) {
@@ -46,7 +47,9 @@ public class CandidateController {
                     .boxed()
                     .collect(Collectors.toList());
             model.addAttribute("pageNumbers", pageNumbers);
+
         }
+
         return "candidates/candidates-paging";
     }
 

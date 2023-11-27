@@ -18,7 +18,7 @@ import java.util.UUID;
 public class Candidate {
     @Id
     @Column(name = "can_id")
-    private UUID can_id;
+    private UUID canId;
     @Column(name = "dob", columnDefinition = "datetime")
     private LocalDate dob;
     @Column(name = "email", length = 50)

@@ -41,7 +41,7 @@ public class Application {
 
                 Candidate can=new Candidate(UUID.randomUUID(),
                         LocalDate.of(1998,11,10),
-                        "email_"+i+"@gmail.com", "name#"+i, "12345",  add);
+                        "email_"+i+"@gmail.com", "name#"+i, i+"",  add);
                 candidateRepository.save(can);
                 System.out.println("Added: " +can);
             }
