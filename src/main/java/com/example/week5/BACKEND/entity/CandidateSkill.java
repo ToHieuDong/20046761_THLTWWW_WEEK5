@@ -2,9 +2,7 @@ package com.example.week5.BACKEND.entity;
 
 import com.example.week5.BACKEND.IDs.CandidateSkillID;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.springframework.stereotype.Component;
 
 import java.io.Serializable;
@@ -13,7 +11,7 @@ import java.io.Serializable;
 @Entity
 @Table(name = "candidate_skill")
 @IdClass(CandidateSkillID.class)
-@Data
+@Getter@Setter@ToString
 @NoArgsConstructor
 @AllArgsConstructor
 public class CandidateSkill implements Serializable {

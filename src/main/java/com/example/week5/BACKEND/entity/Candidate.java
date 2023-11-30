@@ -2,9 +2,7 @@ package com.example.week5.BACKEND.entity;
 
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.springframework.stereotype.Component;
 
 import java.time.LocalDate;
@@ -13,7 +11,7 @@ import java.util.UUID;
 
 @Entity
 @Table(name = "candidate")
-@Data
+@Getter@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 public class Candidate {
