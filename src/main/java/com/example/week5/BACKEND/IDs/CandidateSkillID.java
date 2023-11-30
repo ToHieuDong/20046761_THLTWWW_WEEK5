@@ -15,6 +15,6 @@ import java.io.Serializable;
 @NoArgsConstructor
 @AllArgsConstructor
 public class CandidateSkillID implements Serializable {
-    private Candidate candidate;
-    private Skill skill;
+    private long candidate;
+    private long skill;
 }

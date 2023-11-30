@@ -29,7 +29,7 @@
             </thead>
             <tbody>
             <tr th:each="candidate : ${candidates}">
-                <td th:text="${candidate.getCan_id()}"></td>
+                <td th:text="${candidate.canId}"></td>
                 <td th:text="${candidate.getFullName()}"></td>
                 <td th:text="${candidate.getDob()}"></td>
                 <td th:text="${candidate.getAddress()}"></td>
